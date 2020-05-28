@@ -73,15 +73,15 @@ function main()
         geometry.faces.push( new THREE.Face3( id[0], id[1], id[2] ));	
     }
 
-    var material = new THREE.MeshBasicMaterial();
-    //var material = new THREE.MeshLambertMaterial();
+    //var material = new THREE.MeshBasicMaterial();
+    var material = new THREE.MeshLambertMaterial();
     material.vertexColors = THREE.FaceColors;
 
     for(i=0;i<12;i++){
         geometry.faces[i].color = new THREE.Color( 1, 0, 0 );
     }
 
-    //geometry.computeFaceNormals();
+    geometry.computeFaceNormals();
     //material.side = THREE.FrontSide;
 
     var cube = new THREE.Mesh( geometry, material );
