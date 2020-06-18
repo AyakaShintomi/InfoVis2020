@@ -8,6 +8,8 @@
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
 
+This data is Changes in healthy life expectancy of Japanese female.
+
 
 <script>
 
@@ -33,7 +35,7 @@ d3.csv("https://ayakashintomi.github.io/InfoVis2020/W12/life_expectancy.csv", fu
 // X axis
 var x = d3.scaleBand()
   .range([ 0, width ])
-  .domain(data.map(function(d) { return d.Country; }))
+  .domain(data.map(function(d) { return d.year; }))
   .padding(0.2);
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
@@ -55,10 +57,10 @@ svg.selectAll("mybar")
   .data(data)
   .enter()
   .append("rect")
-    .attr("x", function(d) { return x(d.Country); })
-    .attr("y", function(d) { return y(d.Value); })
+    .attr("x", function(d) { return x(d.year); })
+    .attr("y", function(d) { return y(d.expectancy); })
     .attr("width", x.bandwidth())
-    .attr("height", function(d) { return height - y(d.Value); })
+    .attr("height", function(d) { return height - y(d.expectancy); })
     .attr("fill", "#69b3a2")
 
 })
