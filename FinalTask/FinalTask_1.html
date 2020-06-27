@@ -1,0 +1,60 @@
+<html>
+    <head>
+	<title>FinalTask</title>
+    </head>
+	<body style="margin:0">
+		<div class="title" style="font-family: Arial; font-size: 40pt;">
+			Final Task
+		</div>
+
+		<div class="title" style="font-family: Arial;">
+			<p><font size="4">Isovalue</font></p>
+			You can change isovalue of Lobster berow.You can change isovalue by using bar at right side.
+			You have to click "Apply" button to change isovalue of Lobster.<br>
+			<p><font size="4">Light</font></p>
+			You can turn on and off the light using "On" and "Off" buttons.<br>
+			<p><font size ="4">Material</font></p>
+			You can change material by using "Basic", "Phong" and "Lambert" buttons.
+			You can choose 4 type of materials(basic material, phong material, lambert material and toon material).
+			If you change isovalue by using bar before clicking each of material changing button,
+			isovalue and matial change at the same time. (Default material type is phong material.),<br>
+			
+		</div>
+
+		<div id="display" style="width: 70%; height: 80%; float: left;"></div>
+		
+		<div id="controller" style="width:20%; font-family:Arial; float:right;">
+		<p>Isovalue</p>
+		<label id="label" style="font-family:Arial;">Isovalue:</label>
+		<input type="range" min="0" max="1" step="0.01" value="0.5" id="isovalue"/>
+		<button id="change-isovalue-button" style="font-family:Arial;">Apply</button>
+		</div>
+		
+		<div id="controller2" style="font-family:Arial; width:20%; float:right;">
+		<p>Light</p>
+		<button id="light-on-button" style="font-family:Arial;">On</button>
+		<button id="light-off-button" style="font-family:Arial;">Off</button>
+		</div>
+
+		<div id="controller3" style="width:20%; font-family:Arial; float:right;">
+			<p>Material</p>
+			<button id="Basic-button" style="font-family:Arial;">Basic</button>
+			<button id="Phong-button" style="font-family:Arial;">Phong</button>
+			<button id="Lambert-button" style="font-family:Arial;">Lambert</button>
+			<button id="Toon-button" style="font-family:Arial;">Toon</button>
+		</div>
+
+	<script src="three.min.js"></script>
+	<script src="TrackballControls.js"></script>
+	<script src="https://threejs.org/examples/js/math/Lut.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Build/KVS.min.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Build/KVS2THREE.min.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Source/KVSLobsterData.js"></script>
+	<script src="Bounds.js"></script>
+	<script src="Isosurfaces_1.js"></script>
+	<script src="FinalTask_1.js"></script>
+	<script>
+	 main();
+	</script>
+    </body>
+</html>
